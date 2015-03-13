@@ -7,32 +7,32 @@ describe "Array basics, part 3" do
   }
 
   it "returns a count of the number of dogs" do
-    dog_count = ___
+    dog_count = dogs.count
     expect(dog_count).to be == 6
   end
 
-  xit "returns an array of the lengths of each dog name" do
-    dog_name_counts = ___
+  it "returns an array of the lengths of each dog name" do
+    dog_name_counts = dogs.map {|d| d.length}
     expect(dog_name_counts).to be == [4, 8, 4, 6, 4, 7]
   end
 
-  xit "returns each of the names reversed" do
-    dog_names_reversed = ___
+  it "returns each of the names reversed" do
+    dog_names_reversed = dogs.map { |d| d.reverse}
     expect(dog_names_reversed).to be == ["odiF", "hgielraH", "ilaM", "eixirT", "wonS", "yrotciV"]
   end
 
-  xit "returns the first three names" do
-    first_three = ___
+  it "returns the first three names" do
+    first_three = dogs[0..2]
     expect(first_three).to be == ["Fido", "Harleigh", "Mali"]
   end
 
-  xit "returns a reversed case of the dog names" do
-    dog_names_reverse_cased = ___
+  it "returns a reversed case of the dog names" do
+    dog_names_reverse_cased = dogs.map { |d| d.swapcase}
     expect(dog_names_reverse_cased).to be == ["fIDO", "hARLEIGH", "mALI", "tRIXIE", "sNOW", "vICTORY"]
   end
 
-  xit "returns a sum of the lengths of each of the names" do
-    sum_of_name_lengths = ___
+  it "returns a sum of the lengths of each of the names" do
+    sum_of_name_lengths = dogs.map {|d| d.length}
     expect(sum_of_name_lengths).to be == 33
   end
 
